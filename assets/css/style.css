@@ -32,23 +32,30 @@ nav .connav div img {
      object-fit: cover;
   cursor: pointer;
 }
-nav .connav ul {
+nav .connav .ul1 {
   display: flex;
   gap: 20px;
   list-style: none;
   transition: 1s ease;
 }
-nav .connav ul a {
+nav .connav .ul1 .bi-x-square-fill {
+  color: white;
+  font-size: 40px;
+  right: 20px;
+  top: 20px;
+  position: absolute;
+}
+nav .connav .ul1 a {
   color: white;
   font-size: 15px;
   font-weight: 100;
   text-decoration: none;
   transition: 1s ease;
 }
-nav .connav ul a:hover {
+nav .connav .ul1 a:hover {
   text-decoration: underline;
 }
-nav .connav ul .tickets {
+nav .connav .ul1 .tickets {
   color: white;
   font-size: 15px;
   font-weight: 100;
@@ -56,7 +63,7 @@ nav .connav ul .tickets {
   transition: 1s ease;
   cursor: pointer;
 }
-nav .connav ul .tickets ul {
+nav .connav .ul1 .tickets ul {
   width: 150px;
   height: 200px;
   position: absolute;
@@ -69,14 +76,76 @@ nav .connav ul .tickets ul {
   z-index: -1;
   padding: 10px 10px;
 }
-nav .connav ul .tickets ul a {
+nav .connav .ul1 .tickets ul a {
   color: black;
 }
-nav .connav ul .tickets:hover ul {
+nav .connav .ul1 .tickets:hover ul {
   opacity: 1;
   z-index: 100;
 }
+nav .connav .bi-list {
+  display: none;
+  font-size: 40px;
+}
 
+@media screen and (max-width: 768px) {
+  nav .connav .ul1 {
+    position: absolute;
+    top: -700px;
+    width: 100%;
+    padding: 20px;
+    z-index: 101;
+    background-color: aqua;
+    color: rgb(0, 0, 255);
+    flex-direction: column;
+    gap: 20px;
+    list-style: none;
+    transition: 1s ease;
+  }
+  nav .connav .ul1 a {
+    color: rgb(0, 110, 255);
+    font-size: 15px;
+    font-weight: 100;
+    text-decoration: none;
+    transition: 1s ease;
+  }
+  nav .connav .ul1 a:hover {
+    text-decoration: underline;
+  }
+  nav .connav .ul1 .tickets {
+    color: rgb(0, 110, 255);
+    font-size: 15px;
+    font-weight: 100;
+    text-decoration: none;
+    transition: 1s ease;
+    cursor: pointer;
+  }
+  nav .connav .ul1 .tickets ul {
+    width: 300px;
+    height: 40px;
+    position: absolute;
+    background-color: white;
+    top: 140px;
+    left: 70px;
+    display: flex;
+    opacity: 0;
+    flex-direction: row;
+    z-index: -1;
+    padding: 10px 10px;
+  }
+  nav .connav .ul1 .tickets ul a {
+    color: rgb(255, 0, 0);
+  }
+  nav .connav .ul1 .tickets:hover ul {
+    opacity: 1;
+    z-index: 100;
+  }
+  nav .connav .bi-list {
+    display: block;
+    font-size: 40px;
+    color: white;
+  }
+}
 header {
   top: 0;
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7)), url("https://demo.kaliumtheme.com/travel/wp-content/uploads/2017/06/C5gsPJq.jpg");
@@ -140,57 +209,292 @@ header .headercon button:hover {
   border: none;
 }
 
-section {
+@media screen and (max-width: 768px) {
+  header {
+    top: 0;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7)), url("https://demo.kaliumtheme.com/travel/wp-content/uploads/2017/06/C5gsPJq.jpg");
+    width: 100%;
+    z-index: -20;
+  }
+  header .headercon {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 200px 0 100px 0;
+    gap: 30px;
+  }
+  header .headercon div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  header .headercon div hr {
+    width: 150px;
+    min-width: 100px;
+    transform: rotate(90deg);
+  }
+  header .headercon .hrtext {
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+    width: 100%;
+    display: flex;
+    margin-top: 50px;
+    justify-content: center;
+    align-items: center;
+  }
+  header .headercon .hrtext h1 {
+    color: white;
+    width: 400px;
+    height: 200px;
+    font-family: Quicksand;
+    font-weight: 500;
+    font-size: 49px;
+    text-align: center;
+  }
+  header .headercon .hrtext p {
+    width: 100%;
+    color: white;
+    text-align: center;
+  }
+}
+.sectionfirst {
   width: 100%;
   display: flex;
   justify-content: center;
+  flex-direction: column;
   align-items: center;
 }
-section .sectioncon {
+.sectionfirst .searchsort {
   width: 100%;
-  padding: 100px 0;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.sectionfirst .searchsort input {
+  border-radius: 30px;
+  width: 20%;
+  height: 40px;
+  font-size: 20px;
+  padding: 0px 10px;
+  outline: none;
+  border: 2px solid #666;
+}
+.sectionfirst .searchsort select {
+  border-radius: 30px;
+  height: 40px;
+  font-size: 20px;
+  padding: 0px 10px;
+  outline: none;
+  border: 2px solid #666;
+  width: 10%;
+}
+.sectionfirst .sectioncon {
+  width: 100%;
+  padding: 50px 0 100px 0;
   display: flex;
   justify-content: space-between;
   gap: 20px;
   flex-wrap: wrap;
 }
-section .sectioncon div {
-  flex: 1 1 calc(20% - 20px);
-  max-width: calc(20% - 20px);
+.sectionfirst .sectioncon div {
+  flex: 1 1 calc(25% - 20px);
+  max-width: calc(25% - 20px);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 20px;
 }
-section .sectioncon div img {
+.sectionfirst .sectioncon div span {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  gap: 20px;
+}
+.sectionfirst .sectioncon div img {
   -o-object-fit: cover;
      object-fit: cover;
   height: 64px;
   width: 64px;
 }
-section .sectioncon div h1 {
+.sectionfirst .sectioncon div h1 {
   font-size: 24px;
   font-weight: 400;
   text-align: center;
   font-family: sans-serif;
 }
-section .sectioncon div p {
+.sectionfirst .sectioncon div p {
   text-align: center;
   font-family: "Quicksand";
   font-style: normal;
   font-weight: 500;
   color: #666;
 }
+.sectionfirst .load {
+  width: 100%;
+  padding: 20px 0 100px 0;
+  display: flex;
+  justify-content: center;
+}
+.sectionfirst .load .loadmore {
+  width: 200px;
+  color: rgb(255, 255, 255);
+  border: none;
+  background-color: rgb(42, 42, 240);
+  height: 60px;
+  border-radius: 20px;
+  font-size: 20px;
+  transition: 0.4s ease;
+}
+.sectionfirst .load .loadmore:hover {
+  color: rgb(42, 42, 245);
+  background-color: yellow;
+}
 
 @media screen and (max-width: 1100px) {
-  section .sectioncon div {
+  .sectionfirst .searchsort {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .sectionfirst .searchsort input {
+    width: 40%;
+  }
+  .sectionfirst .searchsort select {
+    width: 40%;
+  }
+  .sectionfirst .sectioncon div {
     flex: 1 1 calc(50% - 20px);
     max-width: calc(50% - 20px);
   }
 }
 @media screen and (max-width: 768px) {
-  section .sectioncon div {
+  .sectionfirst .sectioncon div {
+    flex: 1 1 calc(100% - 20px);
+    max-width: calc(100% - 20px);
+  }
+}
+.sectionfirstdet {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  padding-top: 200px;
+  background-color: rgb(0, 102, 255);
+}
+.sectionfirstdet .searchsort {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.sectionfirstdet .searchsort input {
+  border-radius: 30px;
+  width: 20%;
+  height: 40px;
+  font-size: 20px;
+  padding: 0px 10px;
+  outline: none;
+  border: 2px solid #666;
+}
+.sectionfirstdet .searchsort select {
+  border-radius: 30px;
+  height: 40px;
+  font-size: 20px;
+  padding: 0px 10px;
+  outline: none;
+  border: 2px solid #666;
+  width: 10%;
+}
+.sectionfirstdet .sectioncon {
+  width: 100%;
+  padding: 50px 0 100px 0;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.sectionfirstdet .sectioncon div {
+  flex: 1 1 calc(25% - 20px);
+  max-width: calc(25% - 20px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.sectionfirstdet .sectioncon div span {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  gap: 20px;
+}
+.sectionfirstdet .sectioncon div img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 64px;
+  width: 64px;
+}
+.sectionfirstdet .sectioncon div h1 {
+  font-size: 24px;
+  font-weight: 400;
+  text-align: center;
+  font-family: sans-serif;
+}
+.sectionfirstdet .sectioncon div p {
+  text-align: center;
+  font-family: "Quicksand";
+  font-style: normal;
+  font-weight: 500;
+  color: #666;
+}
+.sectionfirstdet .load {
+  width: 100%;
+  padding: 20px 0 100px 0;
+  display: flex;
+  justify-content: center;
+}
+.sectionfirstdet .load .loadmore {
+  width: 200px;
+  color: rgb(255, 255, 255);
+  border: none;
+  background-color: rgb(42, 42, 240);
+  height: 60px;
+  border-radius: 20px;
+  font-size: 20px;
+  transition: 0.4s ease;
+}
+.sectionfirstdet .load .loadmore:hover {
+  color: rgb(42, 42, 245);
+  background-color: yellow;
+}
+
+@media screen and (max-width: 1100px) {
+  .sectionfirstdet .searchsort {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .sectionfirstdet .searchsort input {
+    width: 40%;
+  }
+  .sectionfirstdet .searchsort select {
+    width: 40%;
+  }
+  .sectionfirstdet .sectioncon div {
+    flex: 1 1 calc(50% - 20px);
+    max-width: calc(50% - 20px);
+  }
+}
+@media screen and (max-width: 768px) {
+  .sectionfirstdet .sectioncon div {
     flex: 1 1 calc(100% - 20px);
     max-width: calc(100% - 20px);
   }
@@ -198,6 +502,7 @@ section .sectioncon div p {
 .section2 {
   width: 100%;
   background-color: #e9ecee;
+  display: flex;
 }
 .section2 .textdivsection2 {
   padding: 200px 30px;
@@ -268,6 +573,7 @@ section .sectioncon div p {
 .section3 {
   width: 100%;
   background-color: #e9ecee;
+  display: flex;
 }
 .section3 .textdivsection3 {
   padding: 200px 30px;
@@ -423,4 +729,15 @@ main .maincon .maincards div span a {
     flex: 1 1 100%;
     max-width: 100%;
   }
+}
+.bi-shift {
+  color: rgb(0, 119, 255);
+  font-size: 60px;
+  position: fixed;
+  bottom: 50px;
+  right: -220px;
+  transition: 0.4s ease;
+}
+.bi-shift:hover {
+  color: yellow;
 }/*# sourceMappingURL=style.css.map */

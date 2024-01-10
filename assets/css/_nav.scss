@@ -17,11 +17,18 @@ nav{
                 cursor: pointer;
             }
         }
-        ul{
+        .ul1{
             display: flex;
             gap: 20px;
             list-style: none;
             transition: 1s ease;
+            .bi-x-square-fill{
+                color: white;
+                font-size: 40px;
+                right: 20px;
+                top: 20px;
+                position: absolute;
+            }
             a{
                 color: white;
                 font-size: 15px;
@@ -64,6 +71,77 @@ nav{
                 }
             }
         }
+        .bi-list{
+            display: none;
+            font-size: 40px;
 
+        }
+
+    }
+}
+@media screen and (max-width:768px) {
+
+    nav{
+        .connav{
+            .ul1{
+                position: absolute;
+                top: -700px;
+                width: 100%;
+                padding: 20px;
+                z-index: 101;
+                background-color: aqua;
+                color: rgb(0, 0, 255);
+                flex-direction: column;
+                gap: 20px;
+                list-style: none;
+                transition: 1s ease;
+                a{
+                    color: rgb(0, 110, 255);
+                    font-size: 15px;
+                    font-weight: 100;
+                    text-decoration: none;
+                    transition: 1s ease;
+                    &:hover{
+                        text-decoration:underline;
+                    }
+                }
+                .tickets{
+                    color: rgb(0, 110, 255);
+                    font-size: 15px;
+                    font-weight: 100;
+                    text-decoration: none;
+                    transition: 1s ease;
+                    cursor: pointer;
+                    ul{
+                        width: 300px;
+                        height: 40px;
+                        position: absolute;
+                        background-color: white;
+                        top: 140px;   
+                        left: 70px;
+                        display: flex;
+                        opacity: 0;
+                        flex-direction: row;
+                        z-index: -1;
+                        padding: 10px 10px;
+                        a{
+                            color:rgb(255, 0, 0);
+    
+                        }
+                    }
+                    &:hover{
+                        ul{
+                         opacity: 1;
+                         z-index: 100;
+                        }
+                    }
+                }
+            }
+            .bi-list{
+                display: block;
+                font-size: 40px;
+                color: white;   
+            }
+        }
     }
 }

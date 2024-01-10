@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>kaliumtheme</title>
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 
 <body>
@@ -14,7 +15,7 @@
         <div class="con connav">
             <div><img src="https://demo.kaliumtheme.com/travel/wp-content/uploads/2017/06/logotravel-white.png" alt="">
             </div>
-            <ul>
+            <ul class="ul1">
                 <a href="#">Destinations</a>
                 <a href="#">Tours</a>
                 <a href="#">News</a>
@@ -28,8 +29,10 @@
                 </li>
                 <a href="#">Booking</a>
                 <a href="#">Buyy Now</a>
+                <a href="./add.html">Add</a>
+                <i class="bi bi-x-square-fill"></i>
             </ul>
-            <i></i>
+            <i class="bi bi-list"></i>
         </div>
     </nav>
     <header>
@@ -47,28 +50,21 @@
             <button>EXPLORE DUBROVNIK</button>
         </div>
     </header>
-    <section>
-        <div class="con sectioncon">
-            <div>
-                <img src="https://demo.kaliumtheme.com/travel/wp-content/uploads/2017/06/sun-umbrella-1.png" alt="">
-                <h1>Tour organizer</h1>
-                <p>Organize your travel plan in easy steps, visit magnificent world attractions .</p>
-            </div>
-            <div>
-                <img src="https://demo.kaliumtheme.com/travel/wp-content/uploads/2017/06/departures-1.png" alt="">
-                <h1>Book a flight</h1>
-                <p>Find the best deals for your next flight, high class flight and low cost ticket.</p>
-            </div>
-            <div>
-                <img src="https://demo.kaliumtheme.com/travel/wp-content/uploads/2017/06/map-1-1.png" alt="">
-                <h1>Plan your trip</h1>
-                <p>Set your plan as a single traveler or in a group, our company will be there.</p>
-            </div>
-            <div>
-                <img src="https://demo.kaliumtheme.com/travel/wp-content/uploads/2017/06/cruise-1.png" alt="">
-                <h1>Cruise deals</h1>
-                <p>Be the captain of your own trip, get the best cruise deals from the system on our site.</p>
-            </div>
+    <section class="sectionfirst">
+        <div class="searchsort">
+            <input type="search" placeholder="search" id="search">
+            <select name="sort" id="sort">
+                <option value="default">default</option>
+                <option value="az">az</option>
+                <option value="za">za</option>
+            </select>
+
+        </div>
+        <div class="con sectioncon" id="cards">
+           
+        </div>
+        <div class="load">
+            <button class="loadmore">load more</button>
         </div>
     </section>
     <section class="section2">
@@ -151,21 +147,10 @@
                         <a href="#">Braches</a>
                     </span></div>
             </div>
-
         </div>
     </main>
-
-
-
-
-
-
-
-
-
-
+    <a href="#"><i class="bi bi-shift"></i></a>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="./assets/script/script.js"></script>
 </body>
-
-
 </html>

@@ -11,9 +11,24 @@
 @import 'nav';
 @import 'header';
 @import 'section';
+@import 'sectiondet';
 @import 'section2';
 @import 'section3';
 @import 'main';
+
+
+
+.bi-shift{
+    color: rgb(0, 119, 255);
+    font-size: 60px;
+    position: fixed;
+    bottom: 50px;
+    right: -220px;
+    transition: 0.4s ease;
+    &:hover{
+        color:yellow;
+    }
+}
 
 
 
