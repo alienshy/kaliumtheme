@@ -43,7 +43,7 @@ async function info(id){
     <div>
     <img src="${data.img}" alt="">
     <h1>${data.name}</h1>
-    <p>${data.info}</p>>
+    <p>${data.info}</p>
 </div>
 `
 }
