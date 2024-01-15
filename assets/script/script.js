@@ -64,8 +64,8 @@ filter.slice(0,maxl).forEach(el =>{
     <p>${el.info}</p>
     <span>
     <a onclick="deletecards(${el.id})"><i class="bi bi-trash2-fill"></i></a>
-    <a href="./add.html?id=${el.id}"><i class="bi bi-arrow-down-square-fill"></i></a>
-    <a href="./det.html?id=${el.id}"><i class="bi bi-info-circle-fill"></i></a>
+    <a href="./add.htm?id=${el.id}"><i class="bi bi-arrow-down-square-fill"></i></a>
+    <a href="./det.htm?id=${el.id}"><i class="bi bi-info-circle-fill"></i></a>
 </span>
 </div>
     `
@@ -128,9 +128,6 @@ search.addEventListener("input",(e)=>{
     window.location.reload();
     return res.data;
  }
- 
-
- //////details////
 
 
 
